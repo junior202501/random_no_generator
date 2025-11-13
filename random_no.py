@@ -69,3 +69,5 @@ def run_game_loop():
         if play_again not in ('y', 'yes'):
             print("\nThanks for playing btw! Goodbye.")
             break
+
+run_game_loop()
