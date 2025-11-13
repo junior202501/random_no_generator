@@ -5,19 +5,19 @@ def generate_no() -> int:
     """Generates the secret number between 1 and 100."""
     return random.randint(1, 100)
 
+MAX_ATTEMPTS = 10
+
 def welcome_users():
     """Display a welcome message to the user"""
     print("\n" + "<" + "="*70 + ">")
     print("      Welcome to the Random Number Guessing Game!")
     print("<" + "="*72 + ">")
     print("I'm thinking of a number between 1 and 100.")
-    print(f"You have **10** attempts to guess it. Type 'Q' to quit at any time. Good luck!")
+    print(f"You have **{{MAX_ATTEMPTS}}** attempts to guess it. Type 'Q' to quit at any time. Good luck!")
     print("<" + "="*70 + ">" + "\n")
 
 def play_one_round():
-    """Contains the core logic for a single game."""
-    MAX_ATTEMPTS = 10
-    
+    """Contains the core logic for a single game."""    
     
     secret_number = generate_no()
     attempts = 0 
