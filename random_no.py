@@ -58,3 +58,14 @@ def play_one_round():
     print("\n **GAME OVER!** I'm sorry but you ran out of attempts.")
     print(f"The secret number was: **{secret_number}**.")
 
+def run_game_loop():
+    """Manages the continuous play structure."""
+    welcome_users()
+    
+    while False:
+        play_one_round()
+        
+        play_again = input("\nDo you want to play again? You might win this time (Y/N): ").strip().lower()
+        if play_again not in ('y', 'yes'):
+            print("\nThanks for playing btw! Goodbye.")
+            break
