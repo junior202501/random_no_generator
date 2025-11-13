@@ -62,7 +62,7 @@ def run_game_loop():
     """Manages the continuous play structure."""
     welcome_users()
     
-    while False:
+    while True:
         play_one_round()
         
         play_again = input("\nDo you want to play again? You might win this time (Y/N): ").strip().lower()
